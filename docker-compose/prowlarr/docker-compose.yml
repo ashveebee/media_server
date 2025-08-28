@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000 # Replace with your user ID
+      - PGID=1000 # Replace with your group ID
+      - TZ=Africa/Johannesburg # Replace with your timezone
+    volumes:
+      - ./prowlarr/config:/config # Maps the config folder on your host
+    ports:
+      - 9696:9696 # Maps the port for the web UI
+    restart: unless-stopped
