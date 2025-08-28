@@ -1,0 +1,17 @@
+---
+version: "3.8"
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Johannesburg # 👈 Change to your timezone
+    volumes:
+      - ./sonarr/config:/config # 👈 Path for Sonarr's database and settings
+      - ./data/tv:/tv # 👈 Path to your TV show library
+      - ./data/downloads:/downloads # 👈 Path to your download client's folder
+    ports:
+      - 8989:8989
+    restart: unless-stopped
