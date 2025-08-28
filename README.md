@@ -11,8 +11,6 @@ The goal is to provide a simple, configurable, and maintainable setup using Dock
 * **Persistent Data**: Uses Docker volumes to ensure your configuration and data persist across container restarts and updates.
 * **Pre-configured Services**: Includes compose files for the most common media server applications.
 
-## stack-services-logo-wall
-
 ## 📦 Services Included
 
 This stack is pre-configured with the following services:
